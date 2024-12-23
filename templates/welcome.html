@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background: linear-gradient(rgb(196, 107, 107),rgb(186, 100, 114),rgb(59, 91, 109));
+            background-repeat: no-repeat;
+        }
+        .btn{
+            background-color: green;
+        }
+        .bt{
+            background-color: blueviolet;
+        }
+
+    </style>
+    <center>
+        <h1>Welcome to simple notes</h1>
+        <a href="{{url_for('create')}}"><button class="btn">create</button></a>
+        <a href="{{url_for('login')}}"><button class="bt">login</button></a>
+    </center>
+</body>
+</html>

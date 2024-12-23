@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp Verification</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h3>{{ message }}</h3>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<body>
+    <form method="post">
+      <div class="one">
+        <h1>otp Verification</h1>
+        <label>Enter otp</label>
+        <input type="text" name="otp" placeholder="enter otp"/> <br>
+        <button>submit</button>
+      </div>
+    </form>
+  </body>
+  
+</html>

@@ -1,0 +1,15 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}
+{% endblock %}
+{% block content %}
+<div class="one">
+    <h1>{{notesdata[3]}}</h1>
+    <label for="titlefield">Title</title></label>
+    <input type="text" id="titlefield" placeholder="Enter a title..." name="title"
+    value="{{notesdata[1]}}" readonly/>
+
+    <label for="contentField">Content:</label>
+    <textarea id="contentField" class="content-field" placeholder="Write your content..."
+    name="content" readonly>{{notesdata[2]}}</textarea>
+</div>
+{% endblock %}

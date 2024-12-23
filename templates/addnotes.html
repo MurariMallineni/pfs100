@@ -1,0 +1,63 @@
+{% extends 'dashboard.html' %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url(https://media1.giphy.com/media/kbnk0mioQGjdmTSjNA/giphy.gif?cid=6c09b95223dp66dkvsdni8vuiq9kw9tuh1jfl0q39rzz2qi3&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .addnotes_container {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px black;
+        width: 400px;
+        text-align: center;
+        height: 300px;
+    }
+
+    .addnotes_container label {
+        padding: 10%;
+    }
+
+    .addnotes_container input {
+        padding: 5%;
+    }
+
+    .btn {
+        padding: 10px;
+        border: none;
+        background-color: brown;
+        color: white;
+        border-radius: 100px;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 3%;
+        justify-content: center;
+    }
+
+    .addnotes_container h1 {
+        margin-bottom: 20px;
+        color: black;
+    }
+</style>
+{% block content %}
+<div class="addnotes_container">
+    <h1>Add new notes</h1>
+    <form method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter your title" required />
+
+        <label for="description">Description:</label>
+        <input type="text-area" id="description" name="description" placeholder="Enter your description" required />
+
+        <button type="submit" class="btn">SUBMIT</button>
+    </form>
+</div>
+{% endblock %}
